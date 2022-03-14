@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "WeatherStation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alertBox",
+		"webpage",
+		"ticker",
+		"humidity",
+		"temperature",
+		"pressure"
+	],
+	"name" : "WeatherData",
+	"type" : "normal"
+}
