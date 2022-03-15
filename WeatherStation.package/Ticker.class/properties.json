@@ -6,13 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"alertBox",
-		"webPage",
-		"humidity",
 		"temperature",
 		"pressure",
-		"ticker"
+		"humidity",
+		"weatherData",
+		"textMorph"
 	],
-	"name" : "WeatherData",
+	"name" : "Ticker",
 	"type" : "normal"
 }

@@ -5,14 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"alertBox",
-		"webPage",
-		"humidity",
-		"temperature",
-		"pressure",
-		"ticker"
-	],
-	"name" : "WeatherData",
+	"instvars" : [ ],
+	"name" : "WebPage",
 	"type" : "normal"
 }
