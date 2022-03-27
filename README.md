@@ -17,5 +17,12 @@ This activity is designed to be completed in groups of 1-3. Phase 1 involves fam
     implemented by the subject  calling an update() method in each of it's oberservers whenever it changes state.This pattern is
     often used in event handling. The Angular front-end framework, for example, uses observers extensively. 
 ## Phase 3 - Implement the Observer Pattern
+    -Make a concrete observer class which has temp humidity and pressure.
+    -Make ticker alertbox and webpage to be subclasses of observer.
+    -In weatherData, take away ticker, alertbox, and webpage and add an observers ordered collection.
+    -for WeatherDatas initialize, add a ticker alertbox and webpage to observers.
+    -In concrete observer make tempUpdate humidityUpdate and pressUpdate which update the variables and also impliment that 
+    in each alert box ticker and webpage to call super whatever and do what THEY each need to do. (alert box will call its alerts, ticker and webpage will update). 
+    -now in weatherdata make one setter (setWeather) which calls the observers update methods. 
 
 
