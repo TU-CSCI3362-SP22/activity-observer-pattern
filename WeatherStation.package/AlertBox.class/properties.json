@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "ConcreteObserver",
 	"category" : "WeatherStation",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"temperature",
-		"humidity",
-		"pressure"
-	],
+	"instvars" : [ ],
 	"name" : "AlertBox",
 	"type" : "normal"
 }

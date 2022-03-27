@@ -1,13 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "ConcreteObserver",
+	"super" : "Object",
 	"category" : "WeatherStation",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"textMorph"
+		"temperature",
+		"humidity",
+		"pressure"
 	],
-	"name" : "Ticker",
+	"name" : "ConcreteObserver",
 	"type" : "normal"
 }

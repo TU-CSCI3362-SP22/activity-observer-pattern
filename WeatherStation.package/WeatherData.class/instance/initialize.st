@@ -4,8 +4,9 @@ initialize
 	humidity := 0.
 	temperature := 0.
 	pressure := 0.
-	alertBox := AlertBox new.
-	webPage := WebPage new.
-	ticker := Ticker new.
-	Transcript open.
+	observers := OrderedCollection new.
+	observers add: (AlertBox new).
+	observers add: (WebPage new).
+	observers add: (Ticker new).
+	Transcript open. 
 	Transcript clear.

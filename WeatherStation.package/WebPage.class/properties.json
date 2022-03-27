@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "ConcreteObserver",
 	"category" : "WeatherStation",
 	"classinstvars" : [ ],
 	"pools" : [ ],
