@@ -6,4 +6,5 @@ initialize
 		yourself.
 	Morph new color: Color white;
 		addMorph: textMorph;
+		extent: 600@100;
 		openInWorld.
