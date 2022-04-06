@@ -59,7 +59,7 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 - Make a **ConcreteObserver** class which has temperature, humidity, and pressure as instance variables. 
 - Change **AlertBox**, **Ticker**, and **WebPage** to be subclasses of **ConcreteObserver**. 
 - In **WeatherData's** instance variables , take away **Ticker**, **WebPage**, and **AlertBox**  and add an observers ordered collection.
-- In WeatherDatas initialize, add a **Ticker**, **WebPage**, and **AlertBox**  to the observers collection. 
+- In **WeatherData's** initialize, add a **Ticker**, **WebPage**, and **AlertBox**  to the observers collection. 
 - In **ConcreteObserver** make **temperatureUpdate**  **humidityUpdate** and **pressureUpdate** which update the object's instance variables (similar to what was in the WebPage in Phase 1).
 -  Implement these methods in **Ticker**, **AlertBox**, **AlertBox**. You will need to will need to use the **super**. 
 	- **AlertBox's **  **update** method will also call each of it's corresponding **[parameter]Alert** methods. 
