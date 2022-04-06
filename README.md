@@ -35,7 +35,7 @@ It should open a transcript and one white text morphs. If the random number gene
 Another team gave us the API for their webpage, represented in the `WebPage` class. We would love to attach this to our `WeatherData`
 
 1. Add a `webpage` instance variable to `WeatherData`
-   2. Be sure to initialize this correctly!
+   - Be sure to initialize this correctly!
 3. Update the `getReadings` method to correctly update the web page.
 
 Test things out in the Playground! You should now get two morph boxes, but they will likely be overlapping. Drag one out of the way!
