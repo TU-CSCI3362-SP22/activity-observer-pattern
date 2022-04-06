@@ -30,14 +30,14 @@ You will need to implement **setHumidity** and **setPressure**, so that WeatherD
 
  To set reasonable parameters for these alerts to go off, consider changing the thresholds in both the AlertBox and the **set[Parameter]** methods. 
 
-To test if your methods work, run this code in playground: 
+To test if your methods work, run this code in playground (Make sure that **sampleWeatherData** has calls to both **setPressure** and **setTemperature**): 
 
  
 
      (WeatherData new) sampleWeatherData.   
 
   
-Make sure that **sampleWeatherData** has calls to both **setPressure** and **setTemperature**. It should open a transcript and two white text morphs (which you can close using [Alt+Shift+M1]). If the random number generated a number that meets your threshold, the transcript should give some helpful advice on how to deal with the nasty weather. 
+It should open a transcript and two white text morphs (which you can close using [Alt+Shift+M1]). If the random number generated a number that meets your threshold, the transcript should give some helpful advice on how to deal with the nasty weather. 
 
 Takeaways:
 
@@ -68,7 +68,7 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 	- **WebPage's**  **update** method will also keep the transcript show code that was in it's old **update**. 
 - Now, in WeatherData, remove the old **set** methods and replace it with one **setWeather** method which generates a random number and passes it to the **update** method of all of the objects in **WeatherData's** observers collection. 
 
-To test if you have implemented the Observer Pattern correctly, change the sampleWeatherData method to just call setWeather and run this: 
+To test if you have implemented the Observer Pattern correctly, change the sampleWeatherData method to just call setWeather and run this (you also may have to delete updateEverything): 
 
     (WeatherData new) sampleWeatherData
 It should work the same as before!
