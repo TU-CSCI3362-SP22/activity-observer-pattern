@@ -1,5 +1,5 @@
 update
-updateTemp: temp Humidity: hum Pressure: pres
+updateTemp: temp humidity: hum pressure: pres
 	temp > 90
 		ifTrue: [ textMorph contents: 'Lord it is hot outside' ].
 	hum > 70
