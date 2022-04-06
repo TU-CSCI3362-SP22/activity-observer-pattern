@@ -41,12 +41,12 @@ Another team gave us the API for their webpage, represented in the `WebPage` cla
 Test things out in the Playground! You should now get two morph boxes, but they will likely be overlapping. Drag one out of the way!
 
 ## Takeaways:
-Looking at WebPage, Ticker, and AlertBox (specifically in sampleWeatherData method) we can see that three different patterns of pulling/pushing data are used. 
-- The Ticker class asks its WeatherData instance variable for updates
-- AlertBox gets the data from a push from WeatherData 
-- WebPage takes humidity,temperature, and humidity separately as method parameters to update. 
+Looking at `WebPage`, `Ticker`, and `AlertBox` (specifically in `getReadings` method) we can see that three different patterns of pulling/pushing data are used: 
+- The `Ticker` class asks its `WeatherData` parameter for updates
+- `AlertBox` gets each kind of data from separate a push from `WeatherData` 
+- `WebPage` takes humidity,temperature, and humidity separately as method parameters to update. 
 
-This is bad. Absolutely disgusting! Currently, there is no standard way to implement  an object that updates according to changes in WeatherData. Instead, it may be better to utilize the Observer pattern. 
+This is bad. Absolutely disgusting! Currently, there is no standard way to implement  an object that updates according to changes in `WeatherData`. Instead, it may be better to utilize the Observer pattern. 
 
 
 # Phase 3 - Observer Time 
