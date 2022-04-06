@@ -6,5 +6,6 @@ initialize
 	pressure := 0.
 	alertBox := AlertBox new.
 	ticker := Ticker new.
+	webpage := WebPage new.
 	Transcript open.
 	Transcript clear.
