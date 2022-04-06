@@ -3,6 +3,6 @@ sampleWeatherData
 	| wd |
 	wd := self new.
 	wd setTemperature.
-	wd setPressure.
-	wd setHumidity.
+	wd ticker update: wd.
+	wd updateWebPage.
 	^ wd

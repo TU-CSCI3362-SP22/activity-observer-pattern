@@ -9,7 +9,6 @@
 		"temperature",
 		"pressure",
 		"humidity",
-		"weatherData",
 		"textMorph"
 	],
 	"name" : "Ticker",
