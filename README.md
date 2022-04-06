@@ -34,7 +34,7 @@ To test if your methods work, run this code in playground (Make sure that **samp
 
  
 
-     (WeatherData new) sampleWeatherData.   
+     WeatherData new sampleWeatherData.   
 
   
 It should open a transcript and two white text morphs (which you can close using [Alt+Shift+M1]). If the random number generated a number that meets your threshold, the transcript should give some helpful advice on how to deal with the nasty weather. 
@@ -70,5 +70,5 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 
 To test if you have implemented the Observer Pattern correctly, change the sampleWeatherData method to just call setWeather and run this (you also may have to delete updateEverything): 
 
-    (WeatherData new) sampleWeatherData
+    WeatherData sampleWeatherData
 It should work the same as before!
