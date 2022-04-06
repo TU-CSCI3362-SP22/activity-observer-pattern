@@ -5,7 +5,6 @@ initialize
 	temperature := 0.
 	pressure := 0.
 	alertBox := AlertBox new.
-	webPage := WebPage new.
 	ticker := Ticker new.
 	Transcript open.
 	Transcript clear.

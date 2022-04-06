@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"alertBox",
-		"webPage",
 		"humidity",
 		"temperature",
 		"pressure",
