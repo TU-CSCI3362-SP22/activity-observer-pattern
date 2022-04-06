@@ -22,29 +22,29 @@ Familiarize yourself with how WeatherData passes its data along to both Ticker a
 
 # Phase 2 - Implementing calls to AlertBox
 
-AlertBox is special in the sense that it should only display information if weather statistics meet some criteria, such as the temperature being too high or too low. 
+**AlertBox** is special in the sense that it should only display information if weather statistics meet some criteria, such as the temperature being too high or too low. 
 
-On the instance side of WeatherData, you can see there is a method **setTemperature**, which creates a random number between 70 and 110 and passes it to the AlertBox's method **temperatureAlert**. 
+On the instance side of WeatherData, you can see there is a method **setTemperature**, which creates a random number between 70 and 110 and passes it to the **AlertBox's** method **temperatureAlert**. 
 
 You will need to implement **setHumidity** and **setPressure**, so that WeatherData will be able  alert the AlertBox of concerning levels of humidity or pressure. These are essentially the same as **setTemperature**, except calling the AlertBox's corresponding **[parameter]Alert** method. 
 
  To set reasonable parameters for these alerts to go off, consider changing the thresholds in both the AlertBox and the **set[Parameter]** methods. 
 
-To test if your methods work, run this code in playground: 
+To test if your methods work, run this code in playground (Make sure that **sampleWeatherData** has calls to both **setPressure** and **setTemperature**): 
 
  
 
-    enter code here
+     WeatherData new sampleWeatherData.   
 
   
-It should open a transcript and two white text morphs (which you can close using ___). If the random number generated a number that meets your threshold, the transcript should give some helpful advice on how to deal with the nasty weather. 
+It should open a transcript and two white text morphs (which you can close using [Alt+Shift+M1]). If the random number generated a number that meets your threshold, the transcript should give some helpful advice on how to deal with the nasty weather. 
 
 Takeaways:
 
-Looking at WebPage, Ticker, and AlertBox, we can see that three different patterns of pulling/pushing data are used. 
+Looking at WebPage, Ticker, and AlertBox (specifically in sampleWeatherData method) we can see that three different patterns of pulling/pushing data are used. 
 - The Ticker class asks it's WeatherData instance variable for updates
 - AlertBox gets the data from a push from WeatherData 
-- WebPage takes WeatherData as a method parameter to update. 
+- WebPage takes humidity,temperature, and humidity seperately as method parameters to update. 
 
 This is bad. Absolutely disgusting. Currently, there is no standard way to implement  an object that updates according to changes in WeatherData. Instead, it may be better to utilize the Observer pattern. 
 
@@ -60,7 +60,7 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 - Change **AlertBox**, **Ticker**, and **WebPage** to be subclasses of **ConcreteObserver**. 
 - In **WeatherData's** instance variables , take away **Ticker**, **WebPage**, and **AlertBox**  and add an observers ordered collection.
 - In WeatherDatas initialize, add a **Ticker**, **WebPage**, and **AlertBox**  to the observers collection. 
-- In **ConcreteObserver** make **temperatureUpdate**  **humidityUpdate** and **pressureUpdate** which update the objects instance variables.
+- In **ConcreteObserver** make **temperatureUpdate**  **humidityUpdate** and **pressureUpdate** which update the object's instance variables (similar to what was in the WebPage in Phase 1).
 -  Implement these methods in **Ticker**, **AlertBox**, **AlertBox**. You will need to will need to use the **super**. 
 	- **AlertBox's **  **update** method will also call each of it's corresponding **[parameter]Alert** methods. 
 	- **Ticker's** **update** method will also keep the textMorph code that was in it's old **update** 
@@ -68,7 +68,7 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 	- **WebPage's**  **update** method will also keep the transcript show code that was in it's old **update**. 
 - Now, in WeatherData, remove the old **set** methods and replace it with one **setWeather** method which generates a random number and passes it to the **update** method of all of the objects in **WeatherData's** observers collection. 
 
-To test if you have implemented the Observer Pattern correctly, you can run this 
+To test if you have implemented the Observer Pattern correctly, change the sampleWeatherData method to just call setWeather and run this (you also may have to delete updateEverything): 
 
-    enter code here
+    WeatherData sampleWeatherData
 It should work the same as before!
