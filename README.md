@@ -41,7 +41,7 @@ It should open a transcript and two white text morphs (which you can close using
 
 Takeaways:
 
-Looking at WebPage, Ticker, and AlertBox, we can see that three different patterns of pulling/pushing data are used. 
+Looking at WebPage, Ticker, and AlertBox (specifically in sampleWeatherData method) we can see that three different patterns of pulling/pushing data are used. 
 - The Ticker class asks it's WeatherData instance variable for updates
 - AlertBox gets the data from a push from WeatherData 
 - WebPage takes humidity,temperature, and humidity seperately as method parameters to update. 
@@ -60,7 +60,7 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
 - Change **AlertBox**, **Ticker**, and **WebPage** to be subclasses of **ConcreteObserver**. 
 - In **WeatherData's** instance variables , take away **Ticker**, **WebPage**, and **AlertBox**  and add an observers ordered collection.
 - In WeatherDatas initialize, add a **Ticker**, **WebPage**, and **AlertBox**  to the observers collection. 
-- In **ConcreteObserver** make **temperatureUpdate**  **humidityUpdate** and **pressureUpdate** which update the objects instance variables.
+- In **ConcreteObserver** make **temperatureUpdate**  **humidityUpdate** and **pressureUpdate** which update the object's instance variables (similar to what was in the WebPage in Phase 1).
 -  Implement these methods in **Ticker**, **AlertBox**, **AlertBox**. You will need to will need to use the **super**. 
 	- **AlertBox's **  **update** method will also call each of it's corresponding **[parameter]Alert** methods. 
 	- **Ticker's** **update** method will also keep the textMorph code that was in it's old **update** 
