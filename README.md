@@ -44,7 +44,7 @@ Takeaways:
 Looking at WebPage, Ticker, and AlertBox, we can see that three different patterns of pulling/pushing data are used. 
 - The Ticker class asks it's WeatherData instance variable for updates
 - AlertBox gets the data from a push from WeatherData 
-- WebPage takes WeatherData as a method parameter to update. 
+- WebPage takes humidity,temperature, and humidity seperately as method parameters to update. 
 
 This is bad. Absolutely disgusting. Currently, there is no standard way to implement  an object that updates according to changes in WeatherData. Instead, it may be better to utilize the Observer pattern. 
 
