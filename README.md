@@ -37,7 +37,8 @@ Another team gave us the API for their webpage, represented in the `WebPage` cla
 1. Add a `webpage` instance variable to `WeatherData`
    2. Be sure to initialize this correctly!
 3. Update the `getReadings` method to correctly update the web page.
-4. Test things out in the Playground! You should now get two morph boxes.
+
+Test things out in the Playground! You should now get two morph boxes, but they will likely be overlapping. Drag one out of the way!
 
 ## Takeaways:
 Looking at WebPage, Ticker, and AlertBox (specifically in sampleWeatherData method) we can see that three different patterns of pulling/pushing data are used. 
