@@ -61,12 +61,13 @@ After hearing of the glory of the Observer Pattern, you must now implement it.
   - Add an `update: weatherData` abstract method to `WeatherObserver`
 - Change `AlertBox`, `Ticker`, and `WebPage` to be subclasses of `Observer`. 
 - In `WeatherData's` instance variables , take away `Ticker`, `WebPage`, and `AlertBox`  and add an `observers` ordered collection. Be sure to initialize it!
-- Add a `registerObserver:` method that adds an observer to the list of `observers`.
+  - Add a `registerObserver:` method that adds an observer to the list of `observers`.
+  - Add a `notifyObservers` method that sends `update:` to each observer.
 - Implement the `update: weatherData` method in `Ticker`, `AlertBox`, `WebPage`. 
   - `Ticker's` `update` method is already implemented!
   - `AlertBox's `  `update` method will also call each of its corresponding `[parameter]Alert` methods. 
   - `WebPage's`  `update` method can either call the existing trinary method, or move the functionality into `update`. 
-- Now, in WeatherData, change the `getReadings` method to go through the list of observers and tell them to update. 
+- Now, in WeatherData, change the `getReadings` method to notify the observers in a properly abstract manner.
 - Test your code using this test block. It should work the same as before!
 
 ```Smalltalk
