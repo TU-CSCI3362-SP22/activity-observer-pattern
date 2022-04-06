@@ -1,5 +1,5 @@
 as yet unclassified
-simpleWeatherData
+sampleWeatherData
 	| wd |
 	wd := self new.
 	wd setTemperature.
